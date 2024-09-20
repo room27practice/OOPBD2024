@@ -14,15 +14,13 @@ namespace Tema_1
             Console.WriteLine("Cenata na produkta e " + pr1.Price);//3.43
 
             pr1.Price = 105m;
-
             Console.WriteLine("Cenata na produkta e" + pr1.Price);
-
-
-            Dice d1 = new Dice();//със 6 дефаултни страни
+            var a = 5.65m;
+            var d1 = new Dice();//със 6 дефаултни страни
             Dice d2 = new Dice() { Sides = 5 };//със 6 дефаултни страни
-            Dice d3 = new Dice() { Sides = 8 };//със 8 страни
-            d2.Sides=-33
-
+            var d3 = new Dice() { Sides = 8 };//със 8 страни
+            d2.Sides = -33;
+            Console.WriteLine(d1.Sides);
         }
     }
 
