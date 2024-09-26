@@ -28,14 +28,10 @@
             game1.GoNextRound(2, 1.3);
           //  game1.KnockDown(false);
 
-
             game1.GoNextRound(1.6, 0.9);
             game1.GoNextRound(2, 1.3);
             game1.GoNextRound(1.6, 0.9);
-
-
         }
-
     }
 
     public class BoxGame
@@ -71,7 +67,6 @@
             }
             PrintVictory();
             Console.WriteLine("This was knockdown Victory!!!");
-
         }
 
         public void GoNextRound(double scoreForPlayer1, double scoreForPlayer2)
