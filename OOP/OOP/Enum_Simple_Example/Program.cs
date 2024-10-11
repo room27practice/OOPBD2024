@@ -4,8 +4,9 @@
     {
         static void Main()
         {
-            TryParseNumberDemo();
-           // EnumDemo();
+            SwitchOnEnum();
+            // TryParseNumberDemo();
+            // EnumDemo();
         }
 
         private static void TryParseNumberDemo()
@@ -43,6 +44,55 @@
             Console.WriteLine($"{daySelectedByInt.ToString()} - {(int)daySelectedByInt}");
         }
 
+
+        public static void SwitchOnEnum()
+        {
+            WeekDay weekDayChosen = Enum.Parse<WeekDay>(Console.ReadLine(), true);
+
+
+
+
+            switch (weekDayChosen)
+            {
+                case WeekDay.Monday:
+                    {
+                        Console.WriteLine("Denq ot sedmicata e ponedelnik!!!!!");
+
+                        break;
+                    }
+                case WeekDay.Tuesday:
+                    {
+
+                        break;
+                    }
+                case WeekDay.Wednesday:
+                    {
+
+                        break;
+                    }
+                case WeekDay.Thursday:
+                    {
+                        break;
+                    }
+
+                case WeekDay.Friday:
+                    break;
+                case WeekDay.Saturday:
+                    break;
+                case WeekDay.Sunday:
+                    break;
+
+
+                default: {
+
+
+                        break;
+                    }
+            }
+
+
+        }
+
     }
 
     public enum WeekDay
@@ -60,6 +110,8 @@
 
     public class Candy
     {
+        public int ManufacturerId { get; set; }// Foreign Key
+        public virtual Manufacturer Manufactuer { get; set; }
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
@@ -67,4 +119,14 @@
         public decimal Price { get; set; }
         public string ImageURL { get; set; }
     }
+
+    public class Manufacturer
+    {
+        public virtual List<Candy> Candies { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Address { get; set; }
+    }
+
 }
