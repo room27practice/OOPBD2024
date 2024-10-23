@@ -21,7 +21,8 @@ namespace ConstructorsChaining
 
 
 
-            Desk d4 = new Desk();
+            Desk d4 = new Desk(17, "Mnogo hubavo kafiavo karbonovo biuro",Color.Brown,Material.Carbone);
+            Desk d5 = new Desk(65, "Mnogo tejko cherno stukleno biuro","Zeleno","Metal");
 
 
 

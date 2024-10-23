@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoServiceDiscountManager"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MethodsAndConstructors", "MethodsAndConstructors\MethodsAndConstructors.csproj", "{708B4665-D071-4D5E-83EA-EA0228F2D1E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstructorsChaining", "ConstructorsChaining\ConstructorsChaining.csproj", "{ECA339C1-02D4-4F0C-9BA1-45148481B0AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstructorsChaining", "ConstructorsChaining\ConstructorsChaining.csproj", "{ECA339C1-02D4-4F0C-9BA1-45148481B0AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DestructorProtectedStaticConstructor", "DestructorProtectedStaticConstructor\DestructorProtectedStaticConstructor.csproj", "{9A8ADBB9-6B67-4FF2-8440-8DDF8E70603D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{ECA339C1-02D4-4F0C-9BA1-45148481B0AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECA339C1-02D4-4F0C-9BA1-45148481B0AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECA339C1-02D4-4F0C-9BA1-45148481B0AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A8ADBB9-6B67-4FF2-8440-8DDF8E70603D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A8ADBB9-6B67-4FF2-8440-8DDF8E70603D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A8ADBB9-6B67-4FF2-8440-8DDF8E70603D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A8ADBB9-6B67-4FF2-8440-8DDF8E70603D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
