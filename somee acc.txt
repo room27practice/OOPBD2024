@@ -13,3 +13,7 @@ Login name:	asencho1276_SQLLogin_1
 PWD LOGIN t721n3sqqf
 
 Connection String:workstation id=Room27Test.mssql.somee.com;packet size=4096;user id=asencho1276_SQLLogin_1;pwd=t721n3sqqf;data source=Room27Test.mssql.somee.com;persist security info=False;initial catalog=Room27Test;TrustServerCertificate=True
+
+
+
+Scaffold-DbContext "Server=workstation id=Room27Test.mssql.somee.com;packet size=4096;user id=asencho1276_SQLLogin_1;pwd=t721n3sqqf;data source=Room27Test.mssql.somee.com;persist security info=False;initial catalog=Room27Test;TrustServerCertificate=True;Database=Room27Test;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
