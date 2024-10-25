@@ -12,7 +12,7 @@ namespace StartUP.DataModels
         }
 
         public string CountryCode { get; set; } = null!;
-        public string IsoCode { get; set; } = null!;
+        public string IsoCode { get; set; } = null!;       
         public string CountryName { get; set; } = null!;
         public string? CurrencyCode { get; set; }
         public string ContinentCode { get; set; } = null!;

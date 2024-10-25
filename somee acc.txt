@@ -1,0 +1,15 @@
+FN: Asen
+LastName: Asen
+Username:asencho1276
+PWD: 76rt#Ad0932s
+Email:fzn34870@dcobe.com
+
+Database name:Room27Test
+
+SQL Server address:	Room27Test.mssql.somee.com
+
+Login name:	asencho1276_SQLLogin_1
+
+PWD LOGIN t721n3sqqf
+
+Connection String:workstation id=Room27Test.mssql.somee.com;packet size=4096;user id=asencho1276_SQLLogin_1;pwd=t721n3sqqf;data source=Room27Test.mssql.somee.com;persist security info=False;initial catalog=Room27Test;TrustServerCertificate=True
