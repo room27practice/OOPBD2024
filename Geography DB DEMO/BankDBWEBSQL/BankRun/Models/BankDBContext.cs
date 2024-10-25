@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace BankRun.Models
 {
-    public partial class Room27TestContext : DbContext
+    public partial class BankDBContext : DbContext
     {
-        public Room27TestContext()
+        public BankDBContext()
         {
         }
 
-        public Room27TestContext(DbContextOptions<Room27TestContext> options)
+        public BankDBContext(DbContextOptions<BankDBContext> options)
             : base(options)
         {
         }
