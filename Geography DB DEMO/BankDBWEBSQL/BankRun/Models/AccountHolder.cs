@@ -1,16 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace BankRun.Models
+﻿namespace BankRun.Models
 {
     public partial class AccountHolder
     {
-        public AccountHolder()
-        {
-            Accounts = new HashSet<Account>();
-        }
+        private static int identityCounter = -1;
 
-        public AccountHolder(string firstName, string lastName, string ssn)
+        static AccountHolder()
+        {
+            using (var db = new BankDBContext())
+            {
+                identityCounter = db.AccountHolders.Select(ac => ac.Id).Max() + 1;
+            }
+        }
+        public AccountHolder()
+        {          
+            Accounts = new HashSet<Account>();
+            Id= identityCounter;
+            identityCounter++;
+        }
+        public AccountHolder(string firstName, string lastName, string ssn):this()
         {
             FirstName = firstName;
             LastName = lastName;
