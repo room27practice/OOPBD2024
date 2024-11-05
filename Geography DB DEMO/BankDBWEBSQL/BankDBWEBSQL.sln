@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankRun", "BankRun\BankRun.csproj", "{38551670-724E-4FF1-9A80-391E0CAAFA19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankRun", "BankRun\BankRun.csproj", "{38551670-724E-4FF1-9A80-391E0CAAFA19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingDemo", "UsingDemo\UsingDemo.csproj", "{31876DE1-778E-498D-885D-63339C570595}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{38551670-724E-4FF1-9A80-391E0CAAFA19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38551670-724E-4FF1-9A80-391E0CAAFA19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38551670-724E-4FF1-9A80-391E0CAAFA19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31876DE1-778E-498D-885D-63339C570595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31876DE1-778E-498D-885D-63339C570595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31876DE1-778E-498D-885D-63339C570595}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31876DE1-778E-498D-885D-63339C570595}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

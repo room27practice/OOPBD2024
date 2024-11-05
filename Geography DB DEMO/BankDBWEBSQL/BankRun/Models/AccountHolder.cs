@@ -12,12 +12,12 @@
             }
         }
         public AccountHolder()
-        {          
+        {
             Accounts = new HashSet<Account>();
-            Id= identityCounter;
+            Id = identityCounter;
             identityCounter++;
         }
-        public AccountHolder(string firstName, string lastName, string ssn):this()
+        public AccountHolder(string firstName, string lastName, string ssn) : this()
         {
             FirstName = firstName;
             LastName = lastName;
@@ -46,6 +46,12 @@
             }
 
             return personalInfo + accountData + $"Total Funds {balance:F2} lv.";
+        }
+
+
+        public string SayHello()
+        {
+            return "Hello from " + FirstName;
         }
 
     }

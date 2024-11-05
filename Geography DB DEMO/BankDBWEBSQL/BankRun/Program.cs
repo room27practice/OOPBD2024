@@ -49,12 +49,14 @@ namespace BankRun
                 holders = db.AccountHolders.Include(h => h.Accounts).ToArray();
             }
 
-            foreach (var h in holders)
+            foreach (var holder in holders)
             {
-                string data = h.GetInfo();
+                string data = holder.GetInfo();
                 Console.WriteLine(data);
                 Console.WriteLine();
                 Thread.Sleep(1000);
+
+                Console.WriteLine(holder.SayHello());
             }
         }
 
