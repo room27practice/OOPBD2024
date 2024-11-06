@@ -37,7 +37,7 @@ namespace LINQ_DEMO
                 {
                     Pets=new List<Animal>()
                     {
-                        new Animal(8,"Donatelo",90,AnimalType.Turtle),                       
+                        new Animal(8,"Donatelo",90,AnimalType.Turtle),
                     }
                 },
                       new User(5, "Kristian", "Cekov")
@@ -51,6 +51,16 @@ namespace LINQ_DEMO
             };
 
 
+
+            Console.ReadLine();
+
+            string[] userNames = users.Select(u => u.FName + " " + u.LName).ToArray();
+
+            string[] userNamesWithAnimalNames = users.Select(u => $"{u.FName} {u.LName}: [{string.Join(", ", u.Pets.Select(p => p.Name))}]").ToArray();
+             
+            //Aleksandr Derivolkov: [Sharo, Koko]
+
+            User[] usersOwningCat = users.Where(u => u.Pets.Count() % 2 == 1).ToArray();
 
 
         }

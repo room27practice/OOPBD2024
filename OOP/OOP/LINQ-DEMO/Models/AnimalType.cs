@@ -2,6 +2,7 @@
 {
     public enum AnimalType
     {
-        Fish, Dog, Cat, Horse, Turtle
+        Fish, Dog, Cat, Horse, Turtle, Snake,Hamster,
+        Parrot
     }
 }
