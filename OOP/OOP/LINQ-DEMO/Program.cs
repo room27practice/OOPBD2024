@@ -56,11 +56,31 @@ namespace LINQ_DEMO
 
             string[] userNames = users.Select(u => u.FName + " " + u.LName).ToArray();
 
+            var userNames2 = users
+                .Where(x => x.Pets.Count() > 1)
+                .Select(x => $"{x.FName[0]}. {x.LName} Pets Count <{x.Pets.Count()}>")
+                .ToArray();
+
             string[] userNamesWithAnimalNames = users.Select(u => $"{u.FName} {u.LName}: [{string.Join(", ", u.Pets.Select(p => p.Name))}]").ToArray();
-             
+
             //Aleksandr Derivolkov: [Sharo, Koko]
 
             User[] usersOwningCat = users.Where(u => u.Pets.Count() % 2 == 1).ToArray();
+
+
+
+            var result = users.Select(u =>
+            {
+                if (u.Pets.Count > 2)
+                {
+                    return "Tvurde Mnogo domashni liubimci!";
+                }
+                return $"{u.FName} {u.LName}: [{string.Join(", ", u.Pets.Select(p => p.Name))}]";
+            }
+           ).ToArray();
+
+
+
 
 
         }
