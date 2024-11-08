@@ -56,7 +56,13 @@ namespace Data.Models
         public string Name { get; set; }
         public int? Age { get; set; }
         public string Proffession { get; set; }
+        public decimal Budget { get; set; }
+        public string IzlishnoNeshto { get; set; }
+
         public virtual HashSet<PersonShop> PersonShops { get; set; }
+
+
+
     }
     public class PersonShop
     {
