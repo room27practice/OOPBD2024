@@ -10,11 +10,11 @@ namespace Engine
 
 
 
-            using (var db=new ShopDbContext())
+            using (var db = new ShopDbContext())
             {
-                List<Purpose> purposesToAdd= new List<Purpose>();
-               //TODO Add purposes
-                
+                List<Purpose> purposesToAdd = new List<Purpose>();
+                //TODO Add purposes
+
                 List<Person> peopleToAdd = new List<Person>();
                 //TODO Add Shop
 

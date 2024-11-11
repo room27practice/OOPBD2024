@@ -10,6 +10,7 @@ namespace Engine
         public DbSet<Purpose> Purposes { get; set; }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<PersonShop> PersonShops { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
         public ShopDbContext()
         { }
@@ -30,6 +31,13 @@ namespace Engine
             modelBuilder.Entity<Person>().Ignore(x => x.IzlishnoNeshto);//няма да се създаде колона в базата!
                                                                         // modelBuilder.Entity<Shop>().HasKey(x => x.Id); досеща се и без наша помощ
             modelBuilder.Entity<PersonShop>().HasKey(x => new { x.ShopId, x.PersonId });//дефинираме композитен ключ
+
+            modelBuilder.Entity<Comment>()
+                    .HasOne(c => c.User)
+                    .WithMany(u => u.Comments)
+                    .HasForeignKey(x => x.UserEGN)
+                    .OnDelete(DeleteBehavior.NoAction);
+
         }
     }
 }

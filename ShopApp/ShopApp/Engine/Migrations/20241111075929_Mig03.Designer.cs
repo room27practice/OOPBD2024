@@ -4,6 +4,7 @@ using Engine;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Engine.Migrations
 {
     [DbContext(typeof(ShopDbContext))]
-    partial class ShopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241111075929_Mig03")]
+    partial class Mig03
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,39 +50,6 @@ namespace Engine.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Addresses");
-                });
-
-            modelBuilder.Entity("Data.Models.Comment", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Content")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("ShopId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserEGN")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ShopId");
-
-                    b.HasIndex("UserEGN");
-
-                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("Data.Models.Person", b =>
@@ -182,25 +151,6 @@ namespace Engine.Migrations
                     b.ToTable("Shops");
                 });
 
-            modelBuilder.Entity("Data.Models.Comment", b =>
-                {
-                    b.HasOne("Data.Models.Shop", "Shop")
-                        .WithMany("Comments")
-                        .HasForeignKey("ShopId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Data.Models.Person", "User")
-                        .WithMany("Comments")
-                        .HasForeignKey("UserEGN")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.Navigation("Shop");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("Data.Models.PersonShop", b =>
                 {
                     b.HasOne("Data.Models.Person", "Person")
@@ -246,8 +196,6 @@ namespace Engine.Migrations
 
             modelBuilder.Entity("Data.Models.Person", b =>
                 {
-                    b.Navigation("Comments");
-
                     b.Navigation("PersonShops");
                 });
 
@@ -258,8 +206,6 @@ namespace Engine.Migrations
 
             modelBuilder.Entity("Data.Models.Shop", b =>
                 {
-                    b.Navigation("Comments");
-
                     b.Navigation("ShopPeople");
                 });
 #pragma warning restore 612, 618
