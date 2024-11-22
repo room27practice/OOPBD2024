@@ -31,7 +31,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstructorsChaining", "Con
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DestructorProtectedStaticConstructor", "DestructorProtectedStaticConstructor\DestructorProtectedStaticConstructor.csproj", "{9A8ADBB9-6B67-4FF2-8440-8DDF8E70603D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ-DEMO", "LINQ-DEMO\LINQ-DEMO.csproj", "{ACDFC0C4-CFB6-4334-B4CC-6A718F3778DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQ-DEMO", "LINQ-DEMO\LINQ-DEMO.csproj", "{ACDFC0C4-CFB6-4334-B4CC-6A718F3778DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQ-DEMO2", "LINQ-DEMO2\LINQ-DEMO2.csproj", "{02F815BC-0AB2-4230-BCCA-BA3DB42D5D63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Inheritance\Inheritance.csproj", "{44E81C32-7B44-49D3-9D44-11E0D7CC5882}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +103,14 @@ Global
 		{ACDFC0C4-CFB6-4334-B4CC-6A718F3778DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACDFC0C4-CFB6-4334-B4CC-6A718F3778DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACDFC0C4-CFB6-4334-B4CC-6A718F3778DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02F815BC-0AB2-4230-BCCA-BA3DB42D5D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02F815BC-0AB2-4230-BCCA-BA3DB42D5D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02F815BC-0AB2-4230-BCCA-BA3DB42D5D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02F815BC-0AB2-4230-BCCA-BA3DB42D5D63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44E81C32-7B44-49D3-9D44-11E0D7CC5882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44E81C32-7B44-49D3-9D44-11E0D7CC5882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44E81C32-7B44-49D3-9D44-11E0D7CC5882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44E81C32-7B44-49D3-9D44-11E0D7CC5882}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
