@@ -25,7 +25,6 @@ namespace Inheritance
                 Console.WriteLine(d);
             }
 
-
         }
     }
 }

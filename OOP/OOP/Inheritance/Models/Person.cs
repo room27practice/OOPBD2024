@@ -104,7 +104,7 @@ namespace Inheritance.Models
             Name = name;
         }
         public string Name { get; set; }
-        public override string ToString()
+        public override sealed string ToString()
         {
             return $"I am duck. My name is {Name}";
         }
