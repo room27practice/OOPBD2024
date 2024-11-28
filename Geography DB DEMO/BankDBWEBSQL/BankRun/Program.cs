@@ -1,5 +1,7 @@
 ﻿using BankRun.Models;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+
 
 namespace BankRun
 {
@@ -7,11 +9,10 @@ namespace BankRun
     {
         static void Main()
         {
-            CreateMultipleAccountHoldersWithConsole();
-
-            Thread.Sleep(2000);
-
-            Console.WriteLine("Choose Action [1 List All Member Details]\n[2 Edit Members Info]\n[3 Manage User Balances]");
+            SeedData();
+            //  CreateMultipleAccountHoldersWithConsole();
+            //  Thread.Sleep(1000);
+            Console.WriteLine("Choose Action \n[1 List All Member Details]\n[2 Edit Members Info]\n[3 Manage User Balances]");
             int actionChoise = int.Parse(Console.ReadLine());
             switch (actionChoise)
             {
@@ -36,8 +37,53 @@ namespace BankRun
                     }
                     break;
             }
-
         }
+
+        private static void SeedData()
+        {        
+            using (var db = new BankDBContext())
+            {
+             //Spirachka
+                if (db.AccountHolders.Count() > 100)
+                {
+                    return;
+                }
+            }
+
+            //foreach (var acc in accountHolderFd.Accounts)
+            //{
+            //    acc.AccountHolder = null;
+            //}
+
+            //string accountHolderFdJson = JsonConvert.SerializeObject(accountHolderFd, Formatting.Indented);
+            //"c:/PAPKA1/PAPKA2
+            string pathToFile = Path.Combine(Directory.GetCurrentDirectory(),"../../../SeedingData/usersData.json");
+            string dataTxt = File.ReadAllText(pathToFile);
+
+            AccountHolder[] newAccHolders = JsonConvert.DeserializeObject<AccountHolder[]>(dataTxt);
+         //   FixData(newAccHolders);
+            //var accHolder2 = newAccHolders[1];
+            using (var db = new BankDBContext())
+            {
+                db.AddRange(newAccHolders);
+                db.SaveChanges();
+            }
+        }
+
+        //public static void FixData(AccountHolder[] accs)
+        //{
+        //    for (int i = 0; i < accs.Count(); i++)
+        //    {
+        //        AccountHolder currentHolder = accs[i];
+        //        var accounts = currentHolder.Accounts.ToArray();
+               
+        //        for (int j = 0; j < currentHolder.Accounts.Count(); j++)
+        //        {
+        //            Account currentAccount = accounts[j];
+        //            currentAccount.AccountHolder = currentHolder;
+        //        }
+        //    }
+        //}
 
         private static void ListAllMembersInfoData()
         {
@@ -48,14 +94,14 @@ namespace BankRun
             {
                 holders = db.AccountHolders.Include(h => h.Accounts).ToArray();
             }
+            Console.WriteLine($"Count of Holders: {holders.Count()}");
 
             foreach (var holder in holders)
             {
                 string data = holder.GetInfo();
                 Console.WriteLine(data);
                 Console.WriteLine();
-                Thread.Sleep(1000);
-
+                Thread.Sleep(500);
                 Console.WriteLine(holder.SayHello());
             }
         }

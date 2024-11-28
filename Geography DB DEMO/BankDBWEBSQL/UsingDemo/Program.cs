@@ -1,4 +1,5 @@
-﻿using BankRun.Models;
+﻿using BankRun;
+using BankRun.Models;
 
 namespace UsingDemo
 {
@@ -10,7 +11,7 @@ namespace UsingDemo
 
             Account acc1 = new Account(76.94m) { AccountHolderId = 1 };
 
-            using (var db = new BankDBContext())
+            using (var db = new BankDbContext())
             {
                 allAccounts = db.Accounts.ToList();
                 db.Accounts.Add(acc1);

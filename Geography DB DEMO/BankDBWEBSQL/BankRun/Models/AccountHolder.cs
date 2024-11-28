@@ -1,21 +1,27 @@
-﻿namespace BankRun.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace BankRun.Models
 {
     public partial class AccountHolder
     {
-        private static int identityCounter = -1;
+       // private static int identityCounter = 1;
 
-        static AccountHolder()
-        {
-            using (var db = new BankDBContext())
-            {
-                identityCounter = db.AccountHolders.Select(ac => ac.Id).Max() + 1;
-            }
-        }
+        //static AccountHolder()
+        //{
+        //    //using (var db = new BankDBContext())
+        //    //{
+        //    //    if (!db.AccountHolders.Any())
+        //    //    {
+        //    //        return;
+        //    //    }
+        //    //    identityCounter = db.AccountHolders.Select(ac => ac.Id).Max() + 1;
+        //    //}
+        //}
         public AccountHolder()
         {
             Accounts = new HashSet<Account>();
-            Id = identityCounter;
-            identityCounter++;
+          //  Id = identityCounter;
+          //  identityCounter++;
         }
         public AccountHolder(string firstName, string lastName, string ssn) : this()
         {
@@ -23,14 +29,17 @@
             LastName = lastName;
             Ssn = ssn;
         }
-
-        public int Id { get; set; }
+//[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; } = 0;
         public string FirstName { get; set; } = null!;
         public string LastName { get; set; } = null!;
         public string Ssn { get; set; } = null!;
 
         public virtual ICollection<Account> Accounts { get; set; }
 
+        
+        
+        
         public string GetInfo()
         {
             string personalInfo = $"Id:{Id}\n --{FirstName[0]}. {LastName} : {Ssn}\n";

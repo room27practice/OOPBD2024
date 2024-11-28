@@ -24,7 +24,7 @@ namespace BankRun.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=workstation id=Room27Test.mssql.somee.com;packet size=4096;user id=asencho1276_SQLLogin_1;pwd=t721n3sqqf;data source=Room27Test.mssql.somee.com;persist security info=False;initial catalog=Room27Test;TrustServerCertificate=True;Database=Room27Test;");
+                optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=Bank;Trusted_Connection=True;");
             }
         }
 
@@ -32,7 +32,7 @@ namespace BankRun.Models
         {
             modelBuilder.Entity<Account>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+              //  entity.Property(e => e.Id).ValueGeneratedNever();
 
                 entity.Property(e => e.Balance)
                     .HasColumnType("money")
@@ -47,7 +47,7 @@ namespace BankRun.Models
 
             modelBuilder.Entity<AccountHolder>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+              //  entity.Property(e => e.Id).ValueGeneratedNever();
 
                 entity.Property(e => e.FirstName)
                     .HasMaxLength(50)
