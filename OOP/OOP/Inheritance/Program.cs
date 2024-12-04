@@ -15,8 +15,7 @@ namespace Inheritance
 
             //m.PresentYourSelf();
 
-
-            string duckNames = "Kuncho Gencho Asen Ivan Makdugal";
+           string duckNames = "Kuncho Gencho Asen Ivan Makdugal";
 
             Duck[] ducks = duckNames.Split(" ").Select(x => new Duck(x)).ToArray();
 

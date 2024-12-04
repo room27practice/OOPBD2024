@@ -59,9 +59,8 @@ namespace BankRun
             //"c:/PAPKA1/PAPKA2
             string pathToFile = Path.Combine(Directory.GetCurrentDirectory(),"../../../SeedingData/usersData.json");
             string dataTxt = File.ReadAllText(pathToFile);
-
             AccountHolder[] newAccHolders = JsonConvert.DeserializeObject<AccountHolder[]>(dataTxt);
-         //   FixData(newAccHolders);
+            // FixData(newAccHolders);
             //var accHolder2 = newAccHolders[1];
             using (var db = new BankDBContext())
             {
