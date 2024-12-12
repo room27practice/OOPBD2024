@@ -51,6 +51,20 @@ namespace Toolbox
             return result;
         }
 
+        public static List<T> MyWhereGen<T>(this List<T> v, Func<T, bool> predicate)
+        {
+            var result = new List<T>();
+            foreach (T item in v)
+            {
+                if (predicate(item))
+                {
+                    result.Add(item);
+                }
+            }
+            Console.WriteLine($"Congratulations from {ApplicationName}");
+            return result;
+        }
+
 
     }
 

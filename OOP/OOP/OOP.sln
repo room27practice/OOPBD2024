@@ -39,7 +39,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance", "Inheritance\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extending", "Extending\Extending.csproj", "{AB165358-3A5B-43C9-9F4A-18BB93A0864F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorHandling", "ErrorHandling\ErrorHandling.csproj", "{4345BA57-D5D2-4BF9-B27A-ABC833190406}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ErrorHandling", "ErrorHandling\ErrorHandling.csproj", "{4345BA57-D5D2-4BF9-B27A-ABC833190406}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandyShop", "CandyShop\CandyShop.csproj", "{D81DE1B1-1A0A-46DB-BEEA-E3E24FEC8EFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +125,10 @@ Global
 		{4345BA57-D5D2-4BF9-B27A-ABC833190406}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4345BA57-D5D2-4BF9-B27A-ABC833190406}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4345BA57-D5D2-4BF9-B27A-ABC833190406}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D81DE1B1-1A0A-46DB-BEEA-E3E24FEC8EFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D81DE1B1-1A0A-46DB-BEEA-E3E24FEC8EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D81DE1B1-1A0A-46DB-BEEA-E3E24FEC8EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D81DE1B1-1A0A-46DB-BEEA-E3E24FEC8EFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
