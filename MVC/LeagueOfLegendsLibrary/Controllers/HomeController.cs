@@ -18,14 +18,28 @@ namespace LeagueOfLegendsLibrary.Controllers
 
         public IActionResult Index()
         {
+            //LeagueCharacter[] allchars = s.GetQuerry().Take(5).ToArray();
+            //Console.WriteLine(allchars.Count());
+            //Console.WriteLine(allchars.First().Name);
+            //Console.WriteLine(allchars.Last().Name);
+            //Console.WriteLine(allchars.ToArray()[2].Name);
+
+
+            //List<LeagueCharacter> allchars2 = s.GetAllCharacters().Take(5).ToList();
+            //Console.WriteLine(allchars2.Count());
+            //Console.WriteLine(allchars2.First().Name);
+            //Console.WriteLine(allchars2.Last().Name);
+            //Console.WriteLine(allchars2.ToArray()[2].Name);
+            
             return View();
+
         }
 
         public IActionResult Privacy()
         {
             var allCharacters = s.GetAllCharacters();
-                       
-            return View();
+             
+            return View(allCharacters);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

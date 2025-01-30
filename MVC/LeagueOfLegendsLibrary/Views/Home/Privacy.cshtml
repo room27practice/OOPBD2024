@@ -1,17 +1,16 @@
 ﻿@using LeagueOfLegendsLibrary.Contracts;
 @using LeagueOfLegendsLibrary.Services;
+@model List<LeagueCharacter>
 @{
     ViewData["Title"] = "LeagueCharacters";
-    string name = "Genadi";
-    ILeagueCharacterService chService = new LeagueCharacterService();
-    var characters = chService.GetAllCharacters();
+   
 }
 
 <h1> Here we will show our League Of Legends Characters!!! </h1>
 <p>Use this page to detail your site's privacy policy.</p>
 
 <div class="d-flex me-2">
-    @foreach (var ch in characters)
+    @foreach (var ch in Model)
     {
         <div class="card me-3" style="width: 18rem;">
             <img src="@ch.MainIMageURL" class="card-img-top" alt="picture-main">
@@ -25,10 +24,7 @@
                 <li class="list-group-item">Fraction: @ch.Fraction</li>
                 <li class="list-group-item">Region: @ch.Region</li>
             </ul>
-          @*  <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-            </div>*@
+        
         </div>
     }
 </div>

@@ -7,6 +7,7 @@ namespace LeagueOfLegendsLibrary.Contracts
         void Delete(int id);
         List<LeagueCharacter> GetAllCharacters();
         LeagueCharacter GetCharacterById(int id);
+        IQueryable<LeagueCharacter> GetQuerry();
     }
 
 }

@@ -1,22 +1,10 @@
-﻿using LeagueOfLegendsLibrary.Data;
+﻿using LeagueOfLegendsLibrary.Contracts;
+using LeagueOfLegendsLibrary.Data;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 
 namespace LeagueOfLegendsLibrary.Services
 {
-    public interface IRepository<TEntity> : IDisposable
-     where TEntity : DeletableEntity, new()
-    {
-        Task AddAssync(TEntity entity);
-        Task AddRangeAssync(IEnumerable<TEntity> entities);
-
-        void Remove(TEntity entity);
-
-        void RemoveRange(IEnumerable<TEntity> entities);
-
-        IQueryable<TEntity> All();
-        Task<int> SaveChangesAsync();
-    }
 
     public class DbRepository<TEntity> : IRepository<TEntity>
         where TEntity : DeletableEntity, new()
